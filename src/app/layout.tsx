@@ -3,20 +3,21 @@ import "@/styles/root-layout.css";
 import { fonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme";
+import { Provider } from "@/providers/context";
 
 export const metadata: Metadata = {
-  title: "Next Essential | Elementary",
+  title: "ABT Gallery",
   description:
     "Next Essential - An Essential Template to get started with Next.js application with all the essentials included...",
-  icons: {
-    icon: "favicon.png",
-  },
+  // icons: {
+  //   icon: "favicon.png",
+  // },
   openGraph: {
-    title: "Next Essential | Elementary",
+    title: "ABT Gallery",
     description:
       "Next Essential - An Essential Template to get started with Next.js application with all the essentials included...",
     url: "https://elementary.vgseven.com",
-    siteName: "Next Essential | Elementary",
+    siteName: "ABT Gallery",
     images: [
       {
         url: "https://odouepjkxheu5esn.public.blob.vercel-storage.com/vgseven/vgseven-banner.png",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next Essential | Elementary",
+    title: "ABT Gallery",
     description:
       "Next Essential - An Essential Template to get started with Next.js application with all the essentials included...",
     images: [
@@ -74,7 +75,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Provider>
+            {children}
+          </Provider>
         </ThemeProvider>
       </body>
     </html>
