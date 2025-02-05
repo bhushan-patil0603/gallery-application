@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { DataContext } from "@/providers/context";
 import Image from "next/image";
 import { useContext } from "react";
@@ -12,8 +12,8 @@ interface Item {
 export const GridImage = ({ item }: { item: Item }) => {
   const dataContext = useContext(DataContext);
   if (!dataContext) return null;
-  
-  const { setData,setToggle } = dataContext;
+
+  const { setData, setToggle } = dataContext;
 
   const setObject = () => {
     setData(item);
@@ -21,7 +21,11 @@ export const GridImage = ({ item }: { item: Item }) => {
   };
 
   return (
-    <button onClick={setObject} type="button" className="relative size-full bg-white p-2">
+    <button
+      onClick={setObject}
+      type="button"
+      className="relative size-full bg-white p-2"
+    >
       <div className="relative">
         <Image
           src={item.path}

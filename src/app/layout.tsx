@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "@/styles/root-layout.css";
 import { fonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/providers/theme";
 import { Provider } from "@/providers/context";
+import { ThemeProvider } from "@/providers/theme";
 
 export const metadata: Metadata = {
   title: "ABT Gallery",
@@ -75,9 +75,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Provider>
-            {children}
-          </Provider>
+          <Provider>{children}</Provider>
         </ThemeProvider>
       </body>
     </html>

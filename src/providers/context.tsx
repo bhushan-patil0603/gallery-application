@@ -1,5 +1,5 @@
 "use client";
-import { useState, createContext, ReactNode } from "react";
+import { type ReactNode, createContext, useState } from "react";
 
 interface Item {
   id: number;
@@ -9,7 +9,7 @@ interface Item {
 
 interface DataContextType {
   data: Item | null;
-  setData: (item: Item) => void;
+  setData: (item: Item | null) => void;
   toggle: boolean | null;
   setToggle: (item: boolean) => void;
 }
