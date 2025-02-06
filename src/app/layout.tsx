@@ -4,7 +4,8 @@ import { fonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Provider } from "@/providers/context";
 import { ThemeProvider } from "@/providers/theme";
-
+import { Header } from "./header";
+import Sortbar from "./sort/sortbar";
 export const metadata: Metadata = {
   title: "ABT Gallery",
   description:
@@ -75,7 +76,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Provider>{children}</Provider>
+          <Provider>
+            <Header />
+            <Sortbar />
+            {children}
+          </Provider>
         </ThemeProvider>
       </body>
     </html>
