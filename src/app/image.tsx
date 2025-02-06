@@ -59,7 +59,7 @@ export const GridImage2 = ({ item }: { item: Item }) => {
       <div className="relative">
         <Image src={item.path} width={600} height={600} alt="Grid Image" />
       </div>
-      <div className="absolute top-0 left-0 size-full bg-black/80 hover:opacity-50"></div>
+      <div className="absolute top-0 left-0 size-full bg-black/80 hover:opacity-50" />
     </button>
   );
 };
